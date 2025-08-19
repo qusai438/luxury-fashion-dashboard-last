@@ -1,9 +1,9 @@
 services:
   - type: web
     name: minimal-dashboard
-    runtime: python          # بدّل env: python إلى runtime: python
+    runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn wsgi:app -b 0.0.0.0:${PORT}  # اربطه على PORT
+    startCommand: gunicorn wsgi:app -b 0.0.0.0:${PORT}
     plan: free
     envVars:
       - key: APP_ENV
